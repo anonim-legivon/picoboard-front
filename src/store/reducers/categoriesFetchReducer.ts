@@ -10,7 +10,7 @@ const initialState = {
 export const categoriesFetchReducer = (
   state: ICategories = initialState,
   action: categorieFetchActionsTypes
-) => {
+): ICategories => {
   switch (action.type) {
     case actionTypes.CATEGORIES_FETCH_REQUEST: {
       return {

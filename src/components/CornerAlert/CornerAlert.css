@@ -1,0 +1,7 @@
+.corner-alert {
+  text-align: center;
+  width: 200px;
+  position: absolute;
+  left: calc(100vw - 200px);
+  top: 0;
+}

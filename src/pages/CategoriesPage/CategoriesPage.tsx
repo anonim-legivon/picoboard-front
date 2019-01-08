@@ -1,9 +1,11 @@
 import * as React from "react";
 import { connect } from "react-redux";
-
 import { Dispatch } from "redux";
+
+import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
-import { ICategories } from "src/store/intefaces";
+import { ICategories, IStore } from "src/store/intefaces";
+import { CategoriesContainer } from "../../components/CategoriesConateiner/CategoriesContainer";
 import { PageTemplate } from "../../templates/PageTemplate/PageTemplate";
 
 interface ICategoriesPageProps {
@@ -13,17 +15,14 @@ interface ICategoriesPageProps {
 
 class CategoriesPage extends React.Component<ICategoriesPageProps> {
   public render() {
-    // const { data, loading, err } = this.props.categories;
-
-    // let categories = [];
-    // if (data) {
-    //   categories = data.map(category => <p />);
-    // }
-
+    const { data, loading } = this.props.categories;
     return (
-      <PageTemplate className="categories-page">
-        <div>!</div>
-      </PageTemplate>
+      <React.Fragment>
+        <PageTemplate className="categories-page">
+          {data ? <CategoriesContainer categories={data} /> : null}
+        </PageTemplate>
+        {loading ? <CornerAlert text="Гружусь" /> : null}
+      </React.Fragment>
     );
   }
   public componentDidMount() {
@@ -31,9 +30,11 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
   }
 }
 
-const mapStateToProps = (state: ICategories) => ({
-  categories: state
-});
+const mapStateToProps = (state: IStore) => {
+  return {
+    categories: state.categories
+  };
+};
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   fetchCategories: () => dispatch(categoriesFetchRequestAction())
 });

@@ -10,6 +10,7 @@ export const MainRouter = () => (
     <BrowserRouter>
       <Switch>
         <Route path="/" component={CategoriesPage} />
+        {/* <Route path="/:board" component={BoardPage} /> */}
       </Switch>
     </BrowserRouter>
   </ReduxProvider>
