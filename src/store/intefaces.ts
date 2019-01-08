@@ -1,3 +1,5 @@
+// Store Inrefaces
+
 export interface IStore {
   categories: ICategories;
   threads: ICatalog;
@@ -48,4 +50,8 @@ export interface ICatalog {
   };
   loading: boolean;
   err?: Error;
+}
+// Route Interfaces
+export interface IBoardPageParameters {
+  board: string;
 }

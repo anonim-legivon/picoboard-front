@@ -6,7 +6,7 @@ interface ICategoriesContainerProps {
   categories: ICategory[];
 }
 
-export const CategoriesContainer = ({
+export const CategoriesWrapper = ({
   categories
 }: ICategoriesContainerProps) => (
   <div className="categories-container">

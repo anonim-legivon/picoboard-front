@@ -5,7 +5,7 @@ import { Dispatch } from "redux";
 import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
 import { ICategories, IStore } from "src/store/intefaces";
-import { CategoriesContainer } from "../../components/CategoriesConateiner/CategoriesContainer";
+import { CategoriesWrapper } from "../../components/CategoriesWrapper/CategoriesWrapper";
 import { PageTemplate } from "../../templates/PageTemplate/PageTemplate";
 
 interface ICategoriesPageProps {
@@ -19,7 +19,7 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
     return (
       <React.Fragment>
         <PageTemplate className="categories-page">
-          {data ? <CategoriesContainer categories={data} /> : null}
+          {data ? <CategoriesWrapper categories={data} /> : null}
         </PageTemplate>
         {loading ? <CornerAlert text="Гружусь" /> : null}
       </React.Fragment>
