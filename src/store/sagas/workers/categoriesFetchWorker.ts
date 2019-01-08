@@ -7,7 +7,7 @@ import {
 
 export function* categoriesFetchWorker() {
   try {
-    const response = yield call(axios.get, "http://85.15.96.9:8000/categories");
+    const response = yield call(axios.get, "/categories");
 
     yield put(categoriesFetchSuccessAction(response.data));
   } catch (error) {

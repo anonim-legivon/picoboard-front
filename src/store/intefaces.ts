@@ -1,5 +1,6 @@
 export interface IStore {
   categories: ICategories;
+  threads: ICatalog;
 }
 export interface ICategories {
   loading: boolean;
@@ -26,4 +27,25 @@ export interface IBoard {
   enable_subject: boolean;
   enable_names: boolean;
   default_name: string;
+}
+export interface IPost {
+  comment: React.ReactNode;
+  num: number;
+  parent: number;
+  is_op_post: boolean;
+  timestamp: string;
+  is_deleted: boolean;
+  name: string;
+  tripcode: string;
+  email: string;
+  subject: string;
+  sage: boolean;
+}
+export interface ICatalog {
+  data: {
+    op_post: IPost | null;
+    last_posts: IPost[];
+  };
+  loading: boolean;
+  err?: Error;
 }

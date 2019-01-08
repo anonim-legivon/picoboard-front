@@ -31,7 +31,7 @@ export const categoriesFetchFailureAction = (
   type: actionTypes.CATEGORIES_FETCH_FAILURE
 });
 
-export type categorieFetchActionsTypes =
+export type categoriesFetchActionsTypes =
   | ICategoriesFetchRequestAction
   | ICategoriesFetchtFailureAction
   | ICategoriesFetchtSuccessAction;

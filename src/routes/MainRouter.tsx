@@ -2,6 +2,7 @@ import * as React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+import BoardPage from "../pages/BoardPage/BoardPage";
 import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
 import { configureStore } from "../store";
 
@@ -10,7 +11,7 @@ export const MainRouter = () => (
     <BrowserRouter>
       <Switch>
         <Route path="/" component={CategoriesPage} />
-        {/* <Route path="/:board" component={BoardPage} /> */}
+        <Route path="/:board" component={BoardPage} />
       </Switch>
     </BrowserRouter>
   </ReduxProvider>

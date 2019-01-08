@@ -1,5 +1,5 @@
 import { actionTypes } from "../actions/actionTypes";
-import { categorieFetchActionsTypes } from "../actions/caregories-fetch";
+import { categoriesFetchActionsTypes } from "../actions/caregories-fetch";
 import { ICategories } from "../intefaces";
 
 const initialState = {
@@ -9,7 +9,7 @@ const initialState = {
 
 export const categoriesFetchReducer = (
   state: ICategories = initialState,
-  action: categorieFetchActionsTypes
+  action: categoriesFetchActionsTypes
 ): ICategories => {
   switch (action.type) {
     case actionTypes.CATEGORIES_FETCH_REQUEST: {
