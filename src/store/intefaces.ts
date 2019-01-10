@@ -3,6 +3,7 @@
 export interface IStore {
   categories: ICategories;
   threads: ICatalog;
+  singleThread: ISingleThread;
 }
 export interface ICategories {
   loading: boolean;
@@ -40,18 +41,37 @@ export interface IPost {
   name: string;
   tripcode: string;
   email: string;
-  subject: string;
+  subject?: string;
   sage: boolean;
 }
+export interface ICatalogPost {
+  op_post: IPost | null;
+  last_posts: IPost[];
+}
 export interface ICatalog {
-  data: {
-    op_post: IPost | null;
-    last_posts: IPost[];
-  };
+  data: ICatalogPost[];
   loading: boolean;
   err?: Error;
 }
+export interface ISingleThread {
+  err?: Error;
+  loading: boolean;
+  data: ISingleThreadData;
+}
+export interface ISingleThreadData {
+  posts: IPost[];
+  posts_count: number;
+  board: string;
+  is_pinned: boolean;
+  is_closed: boolean;
+  is_deleted: boolean;
+  lasthit: string;
+}
+
 // Route Interfaces
 export interface IBoardPageParameters {
   board: string;
+}
+export interface IThreadPageParameters extends IBoardPageParameters {
+  thread: string;
 }

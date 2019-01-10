@@ -3,17 +3,11 @@ import { threadsFetchActionsTypes } from "../actions/threads-fetch";
 import { ICatalog } from "../intefaces";
 
 const initialState = {
-  data: {
-    op_post: null,
-    last_posts: []
-  },
+  data: [],
   loading: true
 };
 
-export const threadsFetchReducer = (
-  state: ICatalog = initialState,
-  action: threadsFetchActionsTypes
-): ICatalog => {
+export const threadsFetchReducer = (state: ICatalog = initialState, action: threadsFetchActionsTypes): ICatalog => {
   switch (action.type) {
     case actionTypes.THREADS_FETCH_REQUEST: {
       return {
@@ -23,7 +17,7 @@ export const threadsFetchReducer = (
     }
     case actionTypes.THREADS_FETCH_SUCCESS: {
       return {
-        data: action.payload.data,
+        data: action.payload,
         loading: false
       };
     }

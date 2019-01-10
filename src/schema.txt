@@ -1,0 +1,195 @@
+борда{
+  "last_num": 138,
+  "board": "b",
+  "board_name": "Бред",
+  "description": "Рандом",
+  "bump_limit": 500,
+  "thread_limit": 200,
+  "filesize_limit": 5242880,
+  "enable_trips": false,
+  "enable_sage": true,
+  "enable_subject": true,
+  "enable_names": true,
+  "default_name": "Аноним"
+},
+категории
+"id": 1,
+        "boards": [
+            {
+                "last_num": 138,
+                "board": "b",
+                "board_name": "Бред",
+                "description": "Рандом",
+                "bump_limit": 500,
+                "thread_limit": 200,
+                "filesize_limit": 5242880,
+                "enable_trips": false,
+                "enable_sage": true,
+                "enable_subject": true,
+                "enable_names": true,
+                "default_name": "Аноним"
+            }
+        ],
+        "name": "Разное",
+        "order": 1,
+        "is_hidden": false
+}
+тред в каталоге
+{
+            "op_post": {
+                "comment": "z",
+                "num": 113,
+                "parent": 0,
+                "is_op_post": true,
+                "timestamp": "1546936524",
+                "is_deleted": false,
+                "name": "Дед",
+                "tripcode": "",
+                "email": "test@mail.com",
+                "subject": "",
+                "sage": true
+            },
+            "last_posts": [
+                {
+                    "comment": "z",
+                    "num": 136,
+                    "parent": 113,
+                    "is_op_post": false,
+                    "timestamp": "1546942683",
+                    "is_deleted": false,
+                    "name": "Дед",
+                    "tripcode": "",
+                    "email": "test@mail.com",
+                    "subject": "",
+                    "sage": true
+                },
+                {
+                    "comment": "z",
+                    "num": 137,
+                    "parent": 113,
+                    "is_op_post": false,
+                    "timestamp": "1546943054",
+                    "is_deleted": false,
+                    "name": "Дед",
+                    "tripcode": "",
+                    "email": "test@mail.com",
+                    "subject": "",
+                    "sage": true
+                },
+                {
+                    "comment": "z",
+                    "num": 138,
+                    "parent": 113,
+                    "is_op_post": false,
+                    "timestamp": "1546943088",
+                    "is_deleted": false,
+                    "name": "Дед",
+                    "tripcode": "",
+                    "email": "test@mail.com",
+                    "subject": "",
+                    "sage": true
+                }
+            ],
+            "posts_count": 25,
+            "board": "b",
+            "is_pinned": false,
+            "is_closed": false,
+            "is_deleted": false,
+            "lasthit": "1546936524"
+        }
+        тред целиком
+{
+  "posts": [
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 10,
+      "parent": 0,
+      "is_op_post": true,
+      "timestamp": "1546856232",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": false
+    },
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 11,
+      "parent": 10,
+      "is_op_post": false,
+      "timestamp": "1546856654",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": false
+    },
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 12,
+      "parent": 10,
+      "is_op_post": false,
+      "timestamp": "1546856697",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": true
+    },
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 13,
+      "parent": 10,
+      "is_op_post": false,
+      "timestamp": "1546856710",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": false
+    },
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 14,
+      "parent": 10,
+      "is_op_post": false,
+      "timestamp": "1546858852",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": false
+    },
+    {
+      "comment": "<em class=\"crossed\">Тест2</em>",
+      "num": 15,
+      "parent": 10,
+      "is_op_post": false,
+      "timestamp": "1546859015",
+      "is_deleted": false,
+      "name": "Аноним",
+      "tripcode": "",
+      "email": "test@mail.com",
+      "subject": "Тест2",
+      "sage": false
+    }
+  ],
+  "posts_count": 6,
+  "board": "b",
+  "is_pinned": true,
+  "is_closed": false,
+  "is_deleted": false,
+  "lasthit": "1546915010"
+}
+api
+
+http://85.15.96.9:8000/boards/b одна борда
+
+http://85.15.96.9:8000/boards/b/threads треды
+
+http://85.15.96.9:8000/boards/b/threads/1 1 тред

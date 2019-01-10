@@ -1,4 +1,4 @@
-import { ICatalog } from "../intefaces";
+import { ICatalogPost } from "../intefaces";
 import { actionTypes } from "./actionTypes";
 
 export interface IThreadsFethcRequestAction {
@@ -6,21 +6,17 @@ export interface IThreadsFethcRequestAction {
   board: string;
 }
 
-export const threadsFetchRequestAction = (
-  board: string
-): IThreadsFethcRequestAction => ({
+export const threadsFetchRequestAction = (board: string): IThreadsFethcRequestAction => ({
   board,
   type: actionTypes.THREADS_FETCH_REQUEST
 });
 
 interface IThreadsFethcSuccessAction {
   type: actionTypes.THREADS_FETCH_SUCCESS;
-  payload: ICatalog;
+  payload: ICatalogPost[];
 }
 
-export const threadsFetchSuccessAction = (
-  payload: ICatalog
-): IThreadsFethcSuccessAction => ({
+export const threadsFetchSuccessAction = (payload: ICatalogPost[]): IThreadsFethcSuccessAction => ({
   payload,
   type: actionTypes.THREADS_FETCH_SUCCESS
 });
@@ -30,9 +26,7 @@ interface IThreadsFethcFailureAction {
   type: actionTypes.THREADS_FETCH_FAILURE;
 }
 
-export const threadsFetchFailureAction = (
-  err: Error
-): IThreadsFethcFailureAction => ({
+export const threadsFetchFailureAction = (err: Error): IThreadsFethcFailureAction => ({
   err,
   type: actionTypes.THREADS_FETCH_FAILURE
 });
