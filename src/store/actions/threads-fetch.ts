@@ -9,8 +9,8 @@ export interface IThreadsFethcRequestAction {
 export const threadsFetchRequestAction = (
   board: string
 ): IThreadsFethcRequestAction => ({
-  type: actionTypes.THREADS_FETCH_REQUEST,
-  board
+  board,
+  type: actionTypes.THREADS_FETCH_REQUEST
 });
 
 interface IThreadsFethcSuccessAction {

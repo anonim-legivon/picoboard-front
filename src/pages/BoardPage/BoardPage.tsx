@@ -12,11 +12,8 @@ import { IBoardPageParameters } from "../../store/intefaces";
 
 interface IBoardPageProps extends RouteComponentProps<IBoardPageParameters> {
   threads: ICatalog;
-  fetchThreads: () => void;
+  fetchThreads: (board: string) => void;
 }
-
-let board: string;
-
 class BoardPage extends React.Component<IBoardPageProps> {
   public board = this.props.match.params;
 
@@ -31,7 +28,7 @@ class BoardPage extends React.Component<IBoardPageProps> {
     );
   }
   public componentDidMount() {
-    this.props.fetchThreads;
+    this.props.fetchThreads(this.props.match.params.board);
   }
 }
 
@@ -40,7 +37,7 @@ const mapStateToProps = ({ threads }: IStore) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchThreads: () => dispatch(threadsFetchRequestAction(board))
+  fetchThreads: (board: string) => dispatch(threadsFetchRequestAction(board))
 });
 
 export default connect(
