@@ -10,6 +10,7 @@ import { PageTemplate } from "src/templates/PageTemplate/PageTemplate";
 import { Header } from "../../components/Header/Header";
 import { ThreadsWrapper } from "../../components/ThreadsWrapper/TheadsWrapper";
 import { IBoardPageParameters } from "../../store/intefaces";
+import "./BoardPage.css";
 
 interface IBoardPageProps extends RouteComponentProps<IBoardPageParameters> {
   threads: ICatalog;
@@ -20,12 +21,15 @@ class BoardPage extends React.Component<IBoardPageProps> {
 
   public render() {
     const { data, loading } = this.props.threads;
+    console.log(data);
 
     return (
       <PageTemplate className="board">
         <Header />
-        {data ? <ThreadsWrapper data={data} /> : null}
-        {loading ? <CornerAlert text="Гружусь" /> : null}
+        <div className="wrapper">
+          {data ? <ThreadsWrapper data={data} /> : null}
+          {loading ? <CornerAlert text="Гружусь" /> : null}
+        </div>
       </PageTemplate>
     );
   }

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { ICatalogPost } from "src/store/intefaces";
-import { OpPostCard } from "../OpPostCard/OpPostCard";
+import OpPostCard from "../OpPostCard/OpPostCard";
 import { PostCard } from "../PostCard/PostCard";
 
 interface IThreadsWrapperProps {
@@ -9,39 +9,39 @@ interface IThreadsWrapperProps {
 }
 
 export const ThreadsWrapper = ({ data }: IThreadsWrapperProps) => {
-  let counter = 0;
+  let counter = 1;
 
   const threads = (
     <div className="threads-wrapper">
-      {data.map(catalogPost => {
-        counter++;
+      {data.map(posts => {
         return (
-          <div key={counter}>
-            <OpPostCard data={catalogPost.op_post} key={counter} />
-            {catalogPost.last_posts.map(post => {
-              counter++;
-              return (
-                <PostCard
-                  key={counter}
-                  comment={post.comment}
-                  num={post.num}
-                  parent={post.parent}
-                  timestamp={post.timestamp}
-                  is_deleted={post.is_deleted}
-                  name={post.name}
-                  tripcode={post.tripcode}
-                  email={post.email}
-                  subject={post.subject}
-                  sage={post.sage}
-                  is_op_post={post.is_op_post}
-                />
-              );
-            })}
+          <div key={1}>
+            <OpPostCard data={posts.op_post} key={1} />
+            {posts.last_posts
+              ? posts.last_posts.map(catalogPost => {
+                  counter++;
+                  return (
+                    <PostCard
+                      key={counter}
+                      comment={catalogPost.comment}
+                      num={catalogPost.num}
+                      parent={catalogPost.parent}
+                      timestamp={catalogPost.timestamp}
+                      is_deleted={catalogPost.is_deleted}
+                      name={catalogPost.name}
+                      tripcode={catalogPost.tripcode}
+                      email={catalogPost.email}
+                      subject={catalogPost.subject}
+                      sage={catalogPost.sage}
+                      is_op_post={catalogPost.is_op_post}
+                    />
+                  );
+                })
+              : null}
           </div>
         );
       })}
     </div>
   );
-
   return threads;
 };

@@ -10,7 +10,7 @@ export function* threadsFetchWorker(action: IThreadsFethcRequestAction) {
   try {
     const response = yield call(axios.get, `/boards/${action.board}/threads`);
 
-    yield put(threadsFetchSuccessAction(response.data));
+    yield put(threadsFetchSuccessAction(response.data.results));
   } catch (error) {
     yield put(threadsFetchFailureAction(error));
   }

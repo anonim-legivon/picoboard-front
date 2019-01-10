@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "./PageTemplate.css";
+
 interface IPageTemplateProps {
   className: string;
   children: React.ReactNode;

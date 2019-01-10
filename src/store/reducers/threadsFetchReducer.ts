@@ -3,7 +3,7 @@ import { threadsFetchActionsTypes } from "../actions/threads-fetch";
 import { ICatalog } from "../intefaces";
 
 const initialState = {
-  data: [],
+  data: null,
   loading: true
 };
 

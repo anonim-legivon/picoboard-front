@@ -7,6 +7,7 @@ import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch
 import { ICategories, IStore } from "src/store/intefaces";
 import { CategoriesWrapper } from "../../components/CategoriesWrapper/CategoriesWrapper";
 import { Header } from "../../components/Header/Header";
+import "./CategoriesPage.css";
 
 interface ICategoriesPageProps {
   categories: ICategories;
@@ -20,7 +21,6 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
       <div className="background">
         <Header className="main-header" />
         <div className="main-page">
-          <div className="logo">Logo</div>
           <p className="about-board">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ut, natus consequatur dolore
             consequuntur ratione saepe, corrupti dignissimos quod deserunt quibusdam accusamus nihil! Placeat minima ut

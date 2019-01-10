@@ -46,10 +46,10 @@ export interface IPost {
 }
 export interface ICatalogPost {
   op_post: IPost | null;
-  last_posts: IPost[];
+  last_posts?: IPost[];
 }
 export interface ICatalog {
-  data: ICatalogPost[];
+  data: ICatalogPost[] | null;
   loading: boolean;
   err?: Error;
 }
