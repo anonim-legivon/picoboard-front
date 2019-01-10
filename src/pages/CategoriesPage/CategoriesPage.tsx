@@ -6,7 +6,7 @@ import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
 import { ICategories, IStore } from "src/store/intefaces";
 import { CategoriesWrapper } from "../../components/CategoriesWrapper/CategoriesWrapper";
-import { PageTemplate } from "../../templates/PageTemplate/PageTemplate";
+import { Header } from "../../components/Header/Header";
 
 interface ICategoriesPageProps {
   categories: ICategories;
@@ -17,12 +17,19 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
   public render() {
     const { data, loading } = this.props.categories;
     return (
-      <React.Fragment>
-        <PageTemplate className="categories-page">
+      <div className="background">
+        <Header className="main-header" />
+        <div className="main-page">
+          <div className="logo">Logo</div>
+          <p className="about-board">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ut, natus consequatur dolore
+            consequuntur ratione saepe, corrupti dignissimos quod deserunt quibusdam accusamus nihil! Placeat minima ut
+            qui necessitatibus quaerat quas.
+          </p>
           {data ? <CategoriesWrapper categories={data} /> : null}
-        </PageTemplate>
-        {loading ? <CornerAlert text="Гружусь" /> : null}
-      </React.Fragment>
+          {loading ? <CornerAlert text="Гружусь" /> : null}
+        </div>
+      </div>
     );
   }
   public componentDidMount() {

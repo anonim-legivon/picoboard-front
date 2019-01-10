@@ -7,6 +7,7 @@ import { ErrorComponent } from "src/components/ErrorComponent/ErrorComponent";
 import { singleThreadFetchRequestAction } from "src/store/actions/single-thread-fetch";
 import { ISingleThread, IStore, IThreadPageParameters } from "src/store/intefaces";
 import { PageTemplate } from "src/templates/PageTemplate/PageTemplate";
+import { SingleThreadWrapper } from "../../components/SingleThreadWrapper/SingleThreadWrapper";
 
 interface IThreadPageProps extends RouteComponentProps<IThreadPageParameters> {
   singleThread: ISingleThread;

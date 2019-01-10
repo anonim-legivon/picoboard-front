@@ -12,6 +12,7 @@ export const MainRouter = () => (
       <Switch>
         <Route path="/" component={CategoriesPage} />
         <Route path="/:board" component={BoardPage} />
+        <Route path="/:board/:thread" component={BoardPage} />
       </Switch>
     </BrowserRouter>
   </ReduxProvider>

@@ -7,6 +7,7 @@ import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { threadsFetchRequestAction } from "src/store/actions/threads-fetch";
 import { ICatalog, IStore } from "src/store/intefaces";
 import { PageTemplate } from "src/templates/PageTemplate/PageTemplate";
+import { Header } from "../../components/Header/Header";
 import { ThreadsWrapper } from "../../components/ThreadsWrapper/TheadsWrapper";
 import { IBoardPageParameters } from "../../store/intefaces";
 
@@ -22,6 +23,7 @@ class BoardPage extends React.Component<IBoardPageProps> {
 
     return (
       <PageTemplate className="board">
+        <Header />
         {data ? <ThreadsWrapper data={data} /> : null}
         {loading ? <CornerAlert text="Гружусь" /> : null}
       </PageTemplate>

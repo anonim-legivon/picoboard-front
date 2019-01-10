@@ -5,4 +5,4 @@ interface ISingleThreadWrapper {
   data: ISingleThreadData;
 }
 
-export const SingleThreadWrapper = () => <div className="single-thread-wrapper" />;
+export const SingleThreadWrapper = ({ data }: ISingleThreadWrapper) => <div className="single-thread-wrapper">!</div>;
