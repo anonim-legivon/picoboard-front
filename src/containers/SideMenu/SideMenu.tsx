@@ -20,7 +20,9 @@ class SideMenu extends React.Component<ISideMenuProps> {
           <React.Fragment>
             <h3>{category.name}</h3>
             {category.boards.map(board => (
-              <Link to={`/${board.board}`}>{board.board_name}</Link>
+              <li>
+                <Link to={`/${board.board}`}>{board.board_name}</Link>
+              </li>
             ))}
           </React.Fragment>
         ))}
@@ -28,12 +30,14 @@ class SideMenu extends React.Component<ISideMenuProps> {
     );
   }
   public componentDidMount() {
-    if (!this.props.categories.data) {
+    if (this.props.categories.data.length === 0) {
       this.props.fetchCategories();
     }
   }
 }
-const mapStateToProps = ({ categories }: IStore) => categories;
+const mapStateToProps = ({ categories }: IStore) => ({
+  categories
+});
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   fetchCategories: () => dispatch(categoriesFetchRequestAction())
 });

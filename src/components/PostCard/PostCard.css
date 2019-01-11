@@ -1,0 +1,12 @@
+.post-card {
+  background-color: #ddd;
+}
+.post-card__head {
+  display: flex;
+}
+.oppost-card__body {
+  padding: 20px;
+}
+.catalog-thread {
+  margin-top: 30px;
+}

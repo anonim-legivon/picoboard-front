@@ -10,6 +10,10 @@ interface IPageTemplateProps {
 export class PageTemplate extends React.Component<IPageTemplateProps> {
   public render() {
     const { className, children } = this.props;
-    return <div className={`page ${className}`}>{children}</div>;
+    return (
+      <div className={`page ${className}`}>
+        <div className="content">{children}</div>
+      </div>
+    );
   }
 }

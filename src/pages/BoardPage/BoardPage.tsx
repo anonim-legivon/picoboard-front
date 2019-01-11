@@ -4,6 +4,7 @@ import { RouteComponentProps } from "react-router-dom";
 
 import { Dispatch } from "redux";
 import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
+import SideMenu from "src/containers/SideMenu/SideMenu";
 import { threadsFetchRequestAction } from "src/store/actions/threads-fetch";
 import { ICatalog, IStore } from "src/store/intefaces";
 import { PageTemplate } from "src/templates/PageTemplate/PageTemplate";
@@ -16,8 +17,15 @@ interface IBoardPageProps extends RouteComponentProps<IBoardPageParameters> {
   threads: ICatalog;
   fetchThreads: (board: string) => void;
 }
-class BoardPage extends React.Component<IBoardPageProps> {
+interface IBoardPageState {
+  hideMenu: boolean;
+}
+class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
   public board = this.props.match.params;
+
+  public state = {
+    hideMenu: false
+  };
 
   public render() {
     const { data, loading } = this.props.threads;
@@ -26,7 +34,9 @@ class BoardPage extends React.Component<IBoardPageProps> {
     return (
       <PageTemplate className="board">
         <Header />
+        <button onClick={this.hideMenuHandler}>Spryatat'</button>
         <div className="wrapper">
+          {this.state.hideMenu ? null : <SideMenu />}
           {data ? <ThreadsWrapper data={data} /> : null}
           {loading ? <CornerAlert text="Гружусь" /> : null}
         </div>
@@ -36,6 +46,13 @@ class BoardPage extends React.Component<IBoardPageProps> {
   public componentDidMount() {
     this.props.fetchThreads(this.props.match.params.board);
   }
+  private hideMenuHandler = () => {
+    this.setState((prevState: IBoardPageState) => {
+      return {
+        hideMenu: !prevState.hideMenu
+      };
+    });
+  };
 }
 
 const mapStateToProps = ({ threads }: IStore) => ({

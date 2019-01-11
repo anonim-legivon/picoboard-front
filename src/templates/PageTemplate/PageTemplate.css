@@ -1,5 +1,9 @@
 .page {
-  background-color: #fcfcfc;
+  background-color: #eeeeee;
   min-height: 100vh;
   padding: 5px;
+}
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
 }

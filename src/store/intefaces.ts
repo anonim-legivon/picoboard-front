@@ -32,7 +32,7 @@ export interface IBoard {
   default_name: string;
 }
 export interface IPost {
-  comment: React.ReactNode;
+  comment: string;
   num: number;
   parent: number;
   is_op_post: boolean;

@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.side-menu {
+  flex-basis: 200px;
+}
+.threads-wrapper {
+  flex-grow: 1;
+}

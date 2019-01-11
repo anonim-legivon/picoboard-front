@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { ICatalogPost } from "src/store/intefaces";
 import OpPostCard from "../OpPostCard/OpPostCard";
-import { PostCard } from "../PostCard/PostCard";
+import PostCard from "../PostCard/PostCard";
 
 interface IThreadsWrapperProps {
   data: ICatalogPost[];
@@ -15,7 +15,7 @@ export const ThreadsWrapper = ({ data }: IThreadsWrapperProps) => {
     <div className="threads-wrapper">
       {data.map(posts => {
         return (
-          <div key={1}>
+          <div className="catalog-thread" key={1}>
             <OpPostCard data={posts.op_post} key={1} />
             {posts.last_posts
               ? posts.last_posts.map(catalogPost => {

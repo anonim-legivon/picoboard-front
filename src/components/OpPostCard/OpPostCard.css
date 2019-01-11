@@ -1,0 +1,42 @@
+.oppost-card__head {
+  color: #5d5d5d;
+  display: flex;
+}
+.oppost-card__subject {
+  font-size: 1.1em;
+  color: #004a99;
+}
+.oppost-card__order {
+  color: #789922;
+}
+.oppost-card__subject {
+  display: inline-block;
+  padding-right: 8px;
+}
+.post-card {
+  display: inline-block;
+  min-height: 90px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.post-reply {
+  margin: 5px;
+}
+.post-card__body {
+  flex-grow: 1;
+  padding: 17px;
+}
+.post-card__head {
+  margin: 5px;
+  margin-left: 17px;
+}
+.post-card__name,
+.post-card__date,
+.post-card__number,
+.post-card__order,
+.oppost-card__name,
+.oppost-card__date,
+.oppost-card__number,
+.oppost-card__order {
+  margin-right: 8px;
+}
