@@ -18,7 +18,9 @@ const PostCard = (props: IPostCardProps) => (
         <span className="post-card__order">{props.key}</span>
         <Link to={`${props.match.params.board}/${props!.num.toString()}`}>Ответить</Link>
       </div>
-      <div className="post-card__body">{props!.comment}</div>
+      <div className="post-card__body" dangerouslySetInnerHTML={{ __html: props!.comment }}>
+        {}
+      </div>
     </div>
   </div>
 );

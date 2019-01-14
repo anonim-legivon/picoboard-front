@@ -9,20 +9,17 @@ interface IThreadsWrapperProps {
 }
 
 export const ThreadsWrapper = ({ data }: IThreadsWrapperProps) => {
-  let counter = 1;
-
   const threads = (
     <div className="threads-wrapper">
-      {data.map(posts => {
+      {data.map((posts, i) => {
         return (
-          <div className="catalog-thread" key={1}>
-            <OpPostCard data={posts.op_post} key={1} />
+          <div className="catalog-thread" key={i}>
+            <OpPostCard data={posts.op_post} key={i * 100 + 2} />
             {posts.last_posts
-              ? posts.last_posts.map(catalogPost => {
-                  counter++;
+              ? posts.last_posts.map((catalogPost, index) => {
                   return (
                     <PostCard
-                      key={counter}
+                      key={index}
                       comment={catalogPost.comment}
                       num={catalogPost.num}
                       parent={catalogPost.parent}

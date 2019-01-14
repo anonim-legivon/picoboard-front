@@ -9,3 +9,12 @@
 .threads-wrapper {
   flex-grow: 1;
 }
+.hide-menu-button,
+.hide-menu-button:active,
+.hide-menu-button:focus {
+  background-color: transparent;
+  color: #ff6600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

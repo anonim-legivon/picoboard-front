@@ -7,14 +7,18 @@ import BoardPage from "../pages/BoardPage/BoardPage";
 import CategoriesPage from "../pages/CategoriesPage/CategoriesPage";
 import { configureStore } from "../store";
 
-export const MainRouter = () => (
-  <ReduxProvider store={configureStore()}>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact={true} component={CategoriesPage} />
-        <Route path="/:board" exact={true} component={BoardPage} />
-        <Route path="/:board/:thread" component={ThreadPage} />
-      </Switch>
-    </BrowserRouter>
-  </ReduxProvider>
-);
+export class MainRouter extends React.Component {
+  public render() {
+    return (
+      <ReduxProvider store={configureStore()}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact={true} component={CategoriesPage} />
+            <Route path="/:board" exact={true} component={BoardPage} />
+            <Route path="/:board/:thread" component={ThreadPage} />
+          </Switch>
+        </BrowserRouter>
+      </ReduxProvider>
+    );
+  }
+}

@@ -6,3 +6,12 @@ body {
 a {
   color: #ff6600;
 }
+a:hover {
+  color: #813604;
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style-type: none;
+}

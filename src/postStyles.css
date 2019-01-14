@@ -1,0 +1,21 @@
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.crossed {
+  text-decoration: line-through;
+}
+.spoiler {
+  color: #b8b8b8;
+  background: #b8b8b8;
+}
+.spoiler:hover {
+  color: black;
+}
+.post_link {
+}
+.quote {
+  color: #45b24c;
+}

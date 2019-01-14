@@ -1,0 +1,8 @@
+.side-menu-category__name {
+  font-size: 1rem;
+  padding: 3px;
+
+  background-color: #dddddd;
+
+  cursor: pointer;
+}

@@ -1,10 +1,9 @@
 import * as React from "react";
-import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Dispatch } from "redux";
 
-import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
-import { ICategories, IStore } from "src/store/intefaces";
+import { ICategories } from "src/store/intefaces";
+import "./SideMenu.css";
+import { SideMenuCategory } from "./SideMenuCategory";
 
 interface ISideMenuProps {
   categories: ICategories;
@@ -14,18 +13,17 @@ interface ISideMenuProps {
 class SideMenu extends React.Component<ISideMenuProps> {
   public render() {
     const categories = this.props.categories.data;
+
     return (
       <div className="side-menu">
-        {categories.map(category => (
-          <React.Fragment>
-            <h3>{category.name}</h3>
-            {category.boards.map(board => (
-              <li>
-                <Link to={`/${board.board}`}>{board.board_name}</Link>
-              </li>
-            ))}
-          </React.Fragment>
-        ))}
+        {categories.map(category => {
+          const boards = category.boards.map(board => (
+            <li key={board.last_num}>
+              <Link to={`/${board.board}`}>{`/ ${board.board} / - ${board.board_name}`}</Link>
+            </li>
+          ));
+          return <SideMenuCategory key={category.id} name={category.name} boards={boards} />;
+        })}
       </div>
     );
   }
@@ -35,13 +33,4 @@ class SideMenu extends React.Component<ISideMenuProps> {
     }
   }
 }
-const mapStateToProps = ({ categories }: IStore) => ({
-  categories
-});
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchCategories: () => dispatch(categoriesFetchRequestAction())
-});
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SideMenu);
+export default SideMenu;

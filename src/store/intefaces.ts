@@ -45,6 +45,7 @@ export interface IPost {
   sage: boolean;
 }
 export interface ICatalogPost {
+  board: string;
   op_post: IPost | null;
   last_posts?: IPost[];
 }
