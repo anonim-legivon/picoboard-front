@@ -1,5 +1,16 @@
 import * as React from "react";
 
+import bold from "./assets/bold.png";
+import italic from "./assets/italic.png";
+import overline from "./assets/overline.png";
+import quote from "./assets/quote1.png";
+import spoiler from "./assets/spoiler.png";
+import strike from "./assets/strike.png";
+import sub from "./assets/sub.png";
+import sup from "./assets/sup.png";
+import underline from "./assets/underline.png";
+import "./Redactor.css";
+
 const tags = {
   bold: ["[b]", "[/b]"],
   crossed: ["[s]", "[/s]"],
@@ -11,9 +22,13 @@ const tags = {
   sup: ["[sup]", "[/sup]"],
   underline: ["[u]", "[/u]"]
 };
+// const tagsDeparted = {
+
+// }
 
 interface IRedactorState {
   textareaValue: string;
+  textareaDeparted: string;
 }
 
 export class Redactor extends React.Component<{}, IRedactorState> {
@@ -22,7 +37,8 @@ export class Redactor extends React.Component<{}, IRedactorState> {
     super(props);
 
     this.state = {
-      textareaValue: "Smth \n"
+      textareaDeparted: "",
+      textareaValue: ""
     };
   }
 
@@ -31,40 +47,37 @@ export class Redactor extends React.Component<{}, IRedactorState> {
       <div className="redactor">
         <textarea
           value={this.state.textareaValue}
-          cols={30}
-          rows={10}
           className="redactor__main-field"
           ref={this.redactorField}
           onChange={this.textareaChangeHandler}
         />
         <div className="style-buttons">
           <button onClick={() => this.textStylingHandler("bold")} className="style-button">
-            {" "}
-            1
+            <img src={bold} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("crossed")} className="style-button">
-            2
+            <img src={strike} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("cursive")} className="style-button">
-            3
+            <img src={italic} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("overline")} className="style-button">
-            4
+            <img src={overline} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("quote")} className="style-button">
-            5
+            <img src={quote} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("spoiler")} className="style-button">
-            6
-          </button>
-          <button onClick={() => this.textStylingHandler("sup")} className="style-button">
-            7
-          </button>
-          <button onClick={() => this.textStylingHandler("sub")} className="style-button">
-            8
+            <img src={spoiler} alt="" />
           </button>
           <button onClick={() => this.textStylingHandler("underline")} className="style-button">
-            9
+            <img src={underline} alt="" />
+          </button>
+          <button onClick={() => this.textStylingHandler("sup")} className="style-button">
+            <img src={sup} alt="" />
+          </button>
+          <button onClick={() => this.textStylingHandler("sub")} className="style-button">
+            <img src={sub} alt="" />
           </button>
         </div>
       </div>

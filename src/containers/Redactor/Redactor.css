@@ -1,0 +1,15 @@
+.style-button {
+  padding: 0;
+  border: none;
+}
+.redactor__main-field {
+  width: 450px;
+  height: 300px;
+  resize: both;
+
+  border: 1px solid lightgrey;
+}
+.redactor__main-field:active,
+.redactor__main-field:focus {
+  outline: none;
+}
