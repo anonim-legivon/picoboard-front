@@ -4,7 +4,7 @@ import { IBoardPageParameters, IPost } from "src/store/intefaces";
 import "./OpPostCard.css";
 
 interface IPostCardProps extends RouteComponentProps<IBoardPageParameters> {
-  data: IPost | null;
+  data: IPost;
   key: number;
 }
 const OpPostCard = ({ data, key, match }: IPostCardProps) => {
@@ -15,6 +15,7 @@ const OpPostCard = ({ data, key, match }: IPostCardProps) => {
         <span className="oppost-card__name">{data!.name}</span>
         <span className="oppost-card__date">{data!.timestamp}</span>
         <span className="oppost-card__number">{`№${data!.num}`}</span>
+        <span className="op">{data.op}</span>
         <span className="oppost-card__order">{key}</span>
         <Link to={`${match.params.board}/${data!.num.toString()}`}>Ответить</Link>
       </div>

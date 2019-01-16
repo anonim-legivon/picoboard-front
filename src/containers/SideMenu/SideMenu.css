@@ -1,3 +1,15 @@
 .side-menu {
+  width: 250px;
   margin-right: 20px;
+  position: absolute;
+
+  left: -270px;
+}
+.hide-menu-button {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+}
+.wrapper {
+  position: relative;
 }

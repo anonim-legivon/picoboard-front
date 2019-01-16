@@ -9,7 +9,7 @@ import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import { MainRouter } from "./routes/MainRouter";
 
-axios.defaults.baseURL = "http://85.15.88.7:8000";
+axios.defaults.baseURL = "http://85.15.80.171:8000";
 
 ReactDOM.render(<MainRouter />, document.getElementById("root") as HTMLElement);
 registerServiceWorker();

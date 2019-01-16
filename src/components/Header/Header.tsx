@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 interface IHeaderProps {
   className?: string;
+  name: string;
 }
 
 export const Header = ({ className }: IHeaderProps) => (
@@ -21,6 +22,7 @@ export const Header = ({ className }: IHeaderProps) => (
     <div className="logo">
       <div className="logo-img">Logo</div>
       <div className="welcomefriend">Добро пожаловать. Снова.</div>
+      <h1>{name}</h1>
     </div>
   </div>
 );

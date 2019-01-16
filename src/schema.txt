@@ -193,3 +193,521 @@ http://85.15.96.9:8000/boards/b одна борда
 http://85.15.96.9:8000/boards/b/threads треды
 
 http://85.15.96.9:8000/boards/b/threads/1 1 тред
+
+
+dexofan, [16.01.19 12:23]
+{
+    "count": 2,
+    "pages": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "op_post": {
+                "comment": "Привет борда",
+                "files": [],
+                "num": 2,
+                "parent": 0,
+                "is_op_post": true,
+                "timestamp": "1547378111",
+                "name": "Аноним",
+                "tripcode": "",
+                "email": "",
+                "subject": "",
+                "sage": false,
+                "op": false
+            },
+            "last_posts": [
+                {
+                    "comment": "1RL5",
+                    "files": [],
+                    "num": 22,
+                    "parent": 2,
+                    "is_op_post": false,
+                    "timestamp": "1547542033",
+                    "name": "Аноним",
+                    "tripcode": "",
+                    "email": "",
+                    "subject": "",
+                    "sage": false,
+                    "op": true
+                },
+                {
+                    "comment": "1RL5",
+                    "files": [],
+                    "num": 23,
+                    "parent": 2,
+                    "is_op_post": false,
+                    "timestamp": "1547542058",
+                    "name": "Аноним",
+                    "tripcode": "",
+                    "email": "",
+                    "subject": "",
+                    "sage": false,
+                    "op": false
+                },
+                {
+                    "comment": "1RL5",
+                    "files": [],
+                    "num": 24,
+                    "parent": 2,
+                    "is_op_post": false,
+                    "timestamp": "1547542072",
+                    "name": "Аноним",
+                    "tripcode": "",
+                    "email": "",
+                    "subject": "",
+                    "sage": false,
+                    "op": true
+                }
+            ],
+            "thread_num": 2,
+            "posts_count": 23,
+            "board": "b",
+            "files_count": 5,
+            "is_pinned": false,
+            "is_closed": false,
+            "lasthit": "1547542072"
+        },
+        {
+            "op_post": {
+                "comment": "Привет борда",
+                "files": [],
+                "num": 1,
+                "parent": 0,
+                "is_op_post": true,
+                "timestamp": "1547377697",
+                "name": "Аноним",
+                "tripcode": "",
+                "email": "",
+                "subject": "",
+                "sage": false,
+                "op": false
+            },
+            "last_posts": null,
+            "thread_num": 1,
+            "posts_count": 1,
+            "board": "b",
+            "files_count": 0,
+            "is_pinned": false,
+            "is_closed": false,
+            "lasthit": "1547377697"
+        }
+    ]
+}
+
+dexofan, [16.01.19 12:23]
+это каталог тредов
+
+dexofan, [16.01.19 12:24]
+{
+    "posts": [
+        {
+            "comment": "Привет борда",
+            "files": [],
+            "num": 2,
+            "parent": 0,
+            "is_op_post": true,
+            "timestamp": "1547378111",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "Привет борда",
+            "files": [
+                {
+                    "size": 6431330,
+                    "path": "/media/2019/01/14/b/src/2/15474457714777.webm",
+                    "name": "15474457714777.webm",
+                    "thumbnail": "/media/2019/01/14/b/thumb/2/15474457714777s.jpg",
+                    "fullname": "15473431695630.webm",
+                    "height": 900,
+                    "width": 900,
+                    "type": 1,
+                    "md5": "fd523e0e171016925a75fbc1e2bf7f85",
+                    "duration": 23,
+                    "tn_height": 500,
+                    "tn_width": 500
+                }
+            ],
+            "num": 3,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547445771",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<a href=\"http://2ch.hk\" target=\"_blank\">http://2ch.hk</a>",
+            "files": [],
+            "num": 4,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462746",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<a href=\"https://2ch.hk\" target=\"_blank\">https://2ch.hk</a>",
+            "files": [],
+            "num": 5,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462753",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<b class=\"bold\">bold</b>",
+            "files": [],
+            "num": 6,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462765",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<strong class=\"italic\">italic</strong>",
+            "files": [],
+            "num": 7,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462785",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<em class=\"crossed\">crossed</em>",
+            "files": [],
+            "num": 8,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462796",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<i class=\"spoiler\">spoiler</i>",
+            "files": [],
+            "num": 9,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462812",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "&gt;quote",
+            "files": [],
+            "num": 10,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462840",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+
+dexofan, [16.01.19 12:24]
+
+            "op": false
+        },
+        {
+            "comment": "&gt; quote",
+            "files": [],
+            "num": 11,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547462850",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "&gt; quote",
+            "files": [],
+            "num": 12,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547463067",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote</span>",
+            "files": [],
+            "num": 13,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547463360",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span>\ntext",
+            "files": [],
+            "num": 14,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547463382",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [],
+            "num": 15,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547463909",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [],
+            "num": 16,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547538968",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [
+                {
+                    "size": 63598,
+                    "path": "/media/2019/01/15/b/src/2/15475391329832.jpg",
+                    "name": "15475391329832.jpg",
+                    "thumbnail": "/media/2019/01/15/b/thumb/2/15475391329832s.jpg",
+                    "fullname": "photo_2019-01-09_20-45-30.jpg",
+                    "height": 720,
+                    "width": 1280,
+                    "type": 0,
+                    "md5": "68e297759a5d4489e70a8a594ca085e3",
+                    "tn_height": 281,
+                    "tn_width": 500
+                }
+            ],
+            "num": 17,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547539132",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [
+                {
+                    "size": 63598,
+                    "path": "/media/2019/01/15/b/src/2/15475396951331.jpg",
+                    "name": "15475396951331.jpg",
+                    "thumbnail": "/media/2019/01/15/b/thumb/2/15475396951331s.jpg",
+                    "fullname": "photo_2019-01-09_20-45-30.jpg",
+                    "height": 720,
+                    "width": 1280,
+                    "type": 0,
+                    "md5": "68e297759a5d4489e70a8a594ca085e3",
+                    "tn_height": 112,
+                    "tn_width": 200
+                }
+            ],
+            "num": 18,
+
+dexofan, [16.01.19 12:24]
+
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547539695",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [
+                {
+                    "size": 63598,
+                    "path": "/media/2019/01/15/b/src/2/15475410333788.jpg",
+                    "name": "15475410333788.jpg",
+                    "thumbnail": "/media/2019/01/15/b/thumb/2/15475410333788s.jpg",
+                    "fullname": "photo_2019-01-09_20-45-30.jpg",
+                    "height": 720,
+                    "width": 1280,
+                    "type": 0,
+                    "md5": "68e297759a5d4489e70a8a594ca085e3",
+                    "tn_height": 112,
+                    "tn_width": 200
+                }
+            ],
+            "num": 19,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547541033",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "<span class=\"quote\">>quote ddd</span><br>text",
+            "files": [
+                {
+                    "size": 63598,
+                    "path": "/media/2019/01/15/b/src/2/15475410409292.jpg",
+                    "name": "15475410409292.jpg",
+                    "thumbnail": "/media/2019/01/15/b/thumb/2/15475410409292s.jpg",
+                    "fullname": "photo_2019-01-09_20-45-30.jpg",
+                    "height": 720,
+                    "width": 1280,
+                    "type": 0,
+                    "md5": "68e297759a5d4489e70a8a594ca085e3",
+                    "tn_height": 112,
+                    "tn_width": 200
+                }
+            ],
+            "num": 20,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547541040",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "1RL5",
+            "files": [],
+            "num": 21,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547541210",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "1RL5",
+            "files": [],
+            "num": 22,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547542033",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": true
+        },
+        {
+            "comment": "1RL5",
+            "files": [],
+            "num": 23,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547542058",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": false
+        },
+        {
+            "comment": "1RL5",
+            "files": [],
+            "num": 24,
+            "parent": 2,
+            "is_op_post": false,
+            "timestamp": "1547542072",
+            "name": "Аноним",
+            "tripcode": "",
+            "email": "",
+            "subject": "",
+            "sage": false,
+            "op": true
+        }
+    ],
+    "thread_num": 2,
+    "posts_count": 23,
+    "board": "b",
+    "files_count": 5,
+    "unique_posters": 1,
+    "is_pinned": false,
+    "is_closed": false,
+    "lasthit": "1547542072"
+}

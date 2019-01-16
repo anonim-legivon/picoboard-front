@@ -32,17 +32,16 @@ class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
 
   public render() {
     const { data, loading } = this.props.threads;
-    const { categories, fetchCategories } = this.props;
+    const { categories } = this.props;
 
     return (
       <PageTemplate className="board">
-        <Header />
-        <h1 className="board__name">{data ? data![0].board : ""}</h1>
-        <button className="hide-menu-button" onClick={this.hideMenuHandler}>
-          {this.state.hideMenu ? ">>" : "<<"}
-        </button>
+        <Header name={data![0].board} />
         <div className="wrapper">
-          {this.state.hideMenu ? null : <SideMenu categories={categories} fetchCategories={fetchCategories} />}
+          <button className="hide-menu-button" onClick={this.hideMenuHandler}>
+            {this.state.hideMenu ? ">>" : "<<"}
+          </button>
+          {this.state.hideMenu ? null : <SideMenu categories={categories} />}
           {data ? <ThreadsWrapper data={data} /> : null}
           {loading ? <CornerAlert text="Гружусь" /> : null}
         </div>
@@ -51,6 +50,9 @@ class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
   }
   public componentDidMount() {
     this.props.fetchThreads(this.props.match.params.board);
+    if (!this.props.categories.data) {
+      this.props.fetchCategories();
+    }
   }
   private hideMenuHandler = () => {
     this.setState((prevState: IBoardPageState) => {

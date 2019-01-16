@@ -43,14 +43,15 @@ export interface IPost {
   email: string;
   subject?: string;
   sage: boolean;
+  op: boolean;
 }
 export interface ICatalogPost {
   board: string;
-  op_post: IPost | null;
+  op_post?: IPost;
   last_posts?: IPost[];
 }
 export interface ICatalog {
-  data: ICatalogPost[] | null;
+  data: ICatalogPost[];
   loading: boolean;
   err?: Error;
 }
