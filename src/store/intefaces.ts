@@ -47,7 +47,7 @@ export interface IPost {
 }
 export interface ICatalogPost {
   board: string;
-  op_post?: IPost;
+  op_post: IPost;
   last_posts?: IPost[];
 }
 export interface ICatalog {

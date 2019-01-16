@@ -8,6 +8,7 @@
     "@types/reactstrap": "^6.4.4",
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
+    "draft-js": "^0.10.5",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",

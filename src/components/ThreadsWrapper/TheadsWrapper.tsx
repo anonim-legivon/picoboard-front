@@ -17,22 +17,7 @@ export const ThreadsWrapper = ({ data }: IThreadsWrapperProps) => {
             <OpPostCard data={posts.op_post} key={i * 100 + 2} />
             {posts.last_posts
               ? posts.last_posts.map((catalogPost, index) => {
-                  return (
-                    <PostCard
-                      key={index}
-                      comment={catalogPost.comment}
-                      num={catalogPost.num}
-                      parent={catalogPost.parent}
-                      timestamp={catalogPost.timestamp}
-                      is_deleted={catalogPost.is_deleted}
-                      name={catalogPost.name}
-                      tripcode={catalogPost.tripcode}
-                      email={catalogPost.email}
-                      subject={catalogPost.subject}
-                      sage={catalogPost.sage}
-                      is_op_post={catalogPost.is_op_post}
-                    />
-                  );
+                  return <PostCard key={index} data={catalogPost} />;
                 })
               : null}
           </div>

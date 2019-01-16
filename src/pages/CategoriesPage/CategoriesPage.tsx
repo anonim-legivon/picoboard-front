@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 
 import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
+import { Redactor } from "src/containers/Redactor/Redactor";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
 import { ICategories, IStore } from "src/store/intefaces";
 import { CategoriesWrapper } from "../../components/CategoriesWrapper/CategoriesWrapper";
@@ -19,7 +20,7 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
     const { data, loading } = this.props.categories;
     return (
       <div className="background">
-        <Header className="main-header" />
+        <Header className="main-header" name="Категории" />
         <div className="main-page">
           <p className="about-board">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ut, natus consequatur dolore
@@ -29,6 +30,7 @@ class CategoriesPage extends React.Component<ICategoriesPageProps> {
           {data ? <CategoriesWrapper categories={data} /> : null}
           {loading ? <CornerAlert text="Гружусь" /> : null}
         </div>
+        <Redactor />
       </div>
     );
   }
