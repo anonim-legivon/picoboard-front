@@ -9,6 +9,8 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "draft-js": "^0.10.5",
+    "moment": "^2.23.0",
+    "momentjs": "^2.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",

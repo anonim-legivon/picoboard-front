@@ -9,7 +9,9 @@ import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import { MainRouter } from "./routes/MainRouter";
 
-axios.defaults.baseURL = "http://85.15.80.171:8000";
+export const HOST_API = "http://85.15.94.221:8000";
+
+axios.defaults.baseURL = HOST_API;
 
 ReactDOM.render(<MainRouter />, document.getElementById("root") as HTMLElement);
 registerServiceWorker();

@@ -32,6 +32,7 @@ export interface IBoard {
   default_name: string;
 }
 export interface IPost {
+  files: IFile[];
   comment: string;
   num: number;
   parent: number;
@@ -69,7 +70,19 @@ export interface ISingleThreadData {
   is_deleted: boolean;
   lasthit: string;
 }
-
+export interface IFile {
+  duration?: number;
+  fullname: string;
+  height: number;
+  name: string;
+  path: string;
+  size: number;
+  type: number;
+  width: number;
+  thumbnail: string;
+  tn_height: number;
+  tn_width: number;
+}
 // Route Interfaces
 export interface IBoardPageParameters {
   board: string;

@@ -1,0 +1,9 @@
+.file {
+  display: block;
+}
+.file-card {
+  padding: 20px;
+}
+.file__page-link {
+  display: block;
+}

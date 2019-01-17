@@ -5,15 +5,16 @@ import PostCard from "../PostCard/PostCard";
 
 interface ISingleThreadWrapper {
   data: ISingleThreadData;
+  openFullFileCard: (path: string, width: number, height: number, type: number) => void;
 }
 
-export const SingleThreadWrapper = ({ data }: ISingleThreadWrapper) => (
+export const SingleThreadWrapper = ({ data, openFullFileCard }: ISingleThreadWrapper) => (
   <div className="single-thread-wrapper">
     {data.posts.map(post => {
       if (post.is_op_post) {
-        return <OpPostCard key={post.num} data={post} />;
+        return <OpPostCard openFullFileCard={openFullFileCard} key={post.num} data={post} />;
       } else {
-        return <PostCard key={post.num} data={post} />;
+        return <PostCard openFullFileCard={openFullFileCard} key={post.num} data={post} />;
       }
     })}
   </div>
