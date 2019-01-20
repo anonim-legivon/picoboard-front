@@ -1,5 +1,4 @@
 .wrapper {
-  display: flex;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -17,4 +16,17 @@
   border: none;
   outline: none;
   cursor: pointer;
+}
+.create-thread-button {
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+
+  color: #ff6600;
+  cursor: pointer;
+}
+.create-thread-button:active,
+.create-thread-button:focus {
+  outline: none;
 }

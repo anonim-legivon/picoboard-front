@@ -2,16 +2,19 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { RouteComponentProps } from "react-router";
 import { Dispatch } from "redux";
+
 import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { ErrorComponent } from "src/components/ErrorComponent/ErrorComponent";
 import { FullFileCard } from "src/components/FullFileCard/FullFileCard";
 import { Header } from "src/components/Header/Header";
+import { Redactor } from "src/containers/Redactor/Redactor";
 import SideMenu from "src/containers/SideMenu/SideMenu";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
 import { singleThreadFetchRequestAction } from "src/store/actions/single-thread-fetch";
 import { ICategories, ISingleThread, IStore, IThreadPageParameters } from "src/store/intefaces";
 import { PageTemplate } from "src/templates/PageTemplate/PageTemplate";
 import { SingleThreadWrapper } from "../../components/SingleThreadWrapper/SingleThreadWrapper";
+import "./ThreadPage.css";
 
 interface IThreadPageProps extends RouteComponentProps<IThreadPageParameters> {
   categories: ICategories;
@@ -26,6 +29,7 @@ interface IThreadPageState {
   path: string;
   type: number;
   width: number;
+  hidePostRedactor: boolean;
 }
 
 class ThreadPage extends React.Component<IThreadPageProps, IThreadPageState> {
@@ -33,6 +37,7 @@ class ThreadPage extends React.Component<IThreadPageProps, IThreadPageState> {
     height: 0,
     hideFullFileCard: true,
     hideMenu: false,
+    hidePostRedactor: true,
     path: "",
     type: 0,
     width: 0
@@ -46,6 +51,17 @@ class ThreadPage extends React.Component<IThreadPageProps, IThreadPageState> {
     return (
       <PageTemplate className="single-thread-page">
         <Header name={data.board} />
+        <div className="create-thread__wrapper">
+          <button
+            className="thread-page__hide-button"
+            onClick={() =>
+              this.setState((prevState: IThreadPageState) => ({ hidePostRedactor: !prevState.hidePostRedactor }))
+            }
+          >
+            {this.state.hidePostRedactor ? "Ответить в тред" : "Закрыть"}
+          </button>
+          {this.state.hidePostRedactor ? null : <Redactor />}
+        </div>
         <div className="wrapper">
           {hideFullFileCard ? null : (
             <FullFileCard
@@ -56,9 +72,6 @@ class ThreadPage extends React.Component<IThreadPageProps, IThreadPageState> {
               hideFullFileCard={this.hideFullFileCard}
             />
           )}
-          <div className="create-thread__wrapper">
-            <span>Создать тред</span>
-          </div>
           <SideMenu categories={categories} />
           {err ? (
             <ErrorComponent message={err} />

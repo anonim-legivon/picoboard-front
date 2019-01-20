@@ -9,7 +9,7 @@ import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 import { MainRouter } from "./routes/MainRouter";
 
-export const HOST_API = "http://85.15.94.221:8000";
+export const HOST_API = "http://85.15.117.7:8000";
 
 axios.defaults.baseURL = HOST_API;
 

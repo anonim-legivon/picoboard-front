@@ -5,6 +5,7 @@ import { RouteComponentProps } from "react-router-dom";
 import { Dispatch } from "redux";
 import { CornerAlert } from "src/components/CornerAlert/CornerAlert";
 import { FullFileCard } from "src/components/FullFileCard/FullFileCard";
+import { Redactor } from "src/containers/Redactor/Redactor";
 import SideMenu from "src/containers/SideMenu/SideMenu";
 import { categoriesFetchRequestAction } from "src/store/actions/caregories-fetch";
 import { threadsFetchRequestAction } from "src/store/actions/threads-fetch";
@@ -22,6 +23,7 @@ interface IBoardPageProps extends RouteComponentProps<IBoardPageParameters> {
   fetchCategories: () => void;
 }
 interface IBoardPageState {
+  hideThreadRedactor: boolean;
   hideFullFileCard: boolean;
   hideMenu: boolean;
   height: number;
@@ -36,6 +38,7 @@ class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
     height: 0,
     hideFullFileCard: true,
     hideMenu: false,
+    hideThreadRedactor: true,
     path: "",
     type: 0,
     width: 0
@@ -49,6 +52,17 @@ class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
     return (
       <PageTemplate className="board">
         <Header name={"..."} />
+        <button
+          className="create-thread-button"
+          onClick={() =>
+            this.setState((prevState: IBoardPageState) =>
+              this.setState({ hideThreadRedactor: !prevState.hideThreadRedactor })
+            )
+          }
+        >
+          {this.state.hideThreadRedactor ? "Создать тред" : "Закрыть"}
+        </button>
+        {this.state.hideThreadRedactor ? null : <Redactor />}
         <div className="wrapper">
           <button className="hide-menu-button" onClick={this.hideMenuHandler}>
             {this.state.hideMenu ? ">>" : "<<"}
@@ -63,7 +77,7 @@ class BoardPage extends React.Component<IBoardPageProps, IBoardPageState> {
             />
           )}
           {this.state.hideMenu ? null : <SideMenu categories={categories} />}
-          {data ? <ThreadsWrapper openFullFileCard={this.openFullFileCard} data={data} /> : null}
+          <main>{data ? <ThreadsWrapper openFullFileCard={this.openFullFileCard} data={data} /> : null}</main>
           {loading ? <CornerAlert text="Гружусь" /> : null}
         </div>
       </PageTemplate>

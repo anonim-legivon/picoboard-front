@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { HOST_API } from "../../index";
+import { Image } from "../Image/Image";
 import "./FullFileCard.css";
 
 interface IFullFileCardProps {
@@ -17,8 +18,8 @@ export const FullFileCard = ({ path, width, height, type, hideFullFileCard }: IF
 
   const rel = width / height;
 
-  let fileWidth;
-  let fileHeight;
+  let fileWidth: number;
+  let fileHeight: number;
 
   if (screenWidth > width && screenHeight > height) {
     fileWidth = width;
@@ -38,21 +39,27 @@ export const FullFileCard = ({ path, width, height, type, hideFullFileCard }: IF
     fileWidth = screenWidth;
     fileHeight = screenWidth / rel;
   }
+  let scale = 1;
   const file =
     type === 0 ? (
-      <img
-        onClick={event => event.stopPropagation()}
-        className="full-img"
-        src={HOST_API + path}
-        style={{ width: fileWidth, height: fileHeight }}
-        alt=""
-      />
+      <div
+        onWheel={e => {
+          const delta = e.deltaY;
+          if (delta > 0) {
+            scale += 0.05;
+          } else {
+            scale -= 0.05;
+          }
+        }}
+      >
+        <Image width={fileWidth! * scale} height={fileHeight! * scale} path={path} />
+      </div>
     ) : (
       <video
         onClick={event => event.stopPropagation()}
         className="full-video"
         src={HOST_API + path}
-        style={{ width: fileWidth, height: fileHeight }}
+        // style={{ width: fileWidth, height: fileHeight }}
         controls={true}
       />
     );
